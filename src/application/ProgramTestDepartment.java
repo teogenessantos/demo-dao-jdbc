@@ -22,6 +22,22 @@ public class ProgramTestDepartment {
 			System.out.println(obj);
 		}
 		
+		/*System.out.println("====== Test Insert method ======");
+		department = new Department(null,"Technologie des informations");
+		departmentDao.insert(department);
+		System.out.println("Insert done! new department: " + department.getId());*/
+		
+		System.out.println("====== Test Update method ======");
+		department = departmentDao.findById(5);
+		department.setName("Technologie de l'information");
+		departmentDao.update(department);
+		System.out.println("Update done!");
+		
+		System.out.println("====== Test FindById method ======");
+		departmentDao.deleteById(8);
+		System.out.println("Delete done!");
+		
+		
 	}
 
 }
